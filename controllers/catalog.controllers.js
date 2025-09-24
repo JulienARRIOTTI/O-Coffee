@@ -1,5 +1,7 @@
-   export default {
+   const catalogController = {
     index: (req, res) => {
-   res.render('catalog');
+   res.render('catalog.ejs');
     }
 }
+
+export default catalogController; 
