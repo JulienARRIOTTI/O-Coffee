@@ -1,7 +1,7 @@
 import express from 'express';
 import homeRouter from './routes/home.routes.js';
-import descriptionRouter from './routes/description.routes.js';
 import catalogRouter from './routes/catalog.routes.js';
+import boutiqueRouter from './routes/boutique.routes.js';
 
 import 'dotenv/config';
 
@@ -20,8 +20,8 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use('/', homeRouter);
-app.use('/description', descriptionRouter);
 app.use('/catalog', catalogRouter);
+app.use('/boutique', boutiqueRouter);
 
 app.listen(port, () => {
     console.log(`Le serveur tourne sur http://localhost:${port}`);
