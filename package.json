@@ -1,0 +1,27 @@
+{
+  "name": "sb04_ocoffee-julienarriotti",
+  "version": "1.0.0",
+  "description": "## Information du projet",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Dundee/SB04_ocoffee-JulienARRIOTTI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Dundee/SB04_ocoffee-JulienARRIOTTI/issues"
+  },
+  "homepage": "https://github.com/O-clock-Dundee/SB04_ocoffee-JulienARRIOTTI#readme",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
+  }
+}
