@@ -7,12 +7,14 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/O-clock-Dundee/SB04_ocoffee-JulienARRIOTTI.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,6 +24,9 @@
   "homepage": "https://github.com/O-clock-Dundee/SB04_ocoffee-JulienARRIOTTI#readme",
   "dependencies": {
     "dotenv": "^17.2.2",
-    "express": "^5.1.0"
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "sequelize": "^6.37.7"
   }
 }
