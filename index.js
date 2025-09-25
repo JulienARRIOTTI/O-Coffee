@@ -1,11 +1,9 @@
+import 'dotenv/config';
+
 import express from 'express';
 import homeRouter from './routes/home.routes.js';
 import catalogRouter from './routes/catalog.routes.js';
 import boutiqueRouter from './routes/boutique.routes.js';
-
-import 'dotenv/config';
-
-
 
 const app = express();
 const port = process.env.PORT;
