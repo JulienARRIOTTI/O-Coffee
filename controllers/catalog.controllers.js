@@ -4,7 +4,7 @@
      index:async (req, res) => {
         try {
 const dataOcoffe = await coffeeDataMapper.findAllcoffee();
-console.log ("toto", dataOcoffe);
+//console.log ("toto", dataOcoffe);
 res.render('catalog.ejs',
         {
         coffeeList:dataOcoffe,       

@@ -9,10 +9,10 @@
 
          <% coffeeList.forEach(coffee => { %>
           <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="<%= coffee.id %>"
-            />
+           <img
+  src="../images/coffees/<%= coffee.reference %>.png"
+  alt="<%= coffee.name %> - <%= coffee.reference %>"
+/>
             <div>
               <h2> <%= coffee.name %> </h2>
               <p> <%= coffee.country_name %> </p>
