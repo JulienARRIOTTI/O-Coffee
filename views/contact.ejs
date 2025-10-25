@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+<section id="contact">
+<h1>Nous contacter</h1>
+<script type="text/javascript" src="<%= process.env.UserEmailJS %>"></script>
+<script>
+  
+  (function(){
+    emailjs.init("<%= process.env.EMAILJS_PUBLIC_KEY %>"); 
+  })();
+</script>
+
+<form id="contact-form">
+  <input type="text" name="user_name" placeholder="Nom" required>
+  <input type="email" name="user_email" placeholder="Email" required>
+  <textarea name="message" placeholder="Votre message" required></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+    emailjs.sendForm('<%= process.env.service %>', '<% process.env.template %>', this)
+    .then(function(response) {
+      alert('Message envoyé ! Un email de confirmation a été envoyé à : ' + this.user_email.value);
+      document.getElementById('contact-form').reset();
+    }.bind(this), function(error) {
+      alert('Erreur : ' + JSON.stringify(error));
+      console.error('Détails de l\'erreur :', error); 
+    });
+});
+</script>
+
+</section>
+
+<%- include('partials/footer') %>
